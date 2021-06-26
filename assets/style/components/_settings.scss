@@ -1,0 +1,29 @@
+*,
+:before,
+:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$color-1: rgb(207, 74, 67);
+$color-2: rgb(225, 83, 73);
+$color-3: rgb(233, 95, 85);
+$color-4: rgb(203, 90, 94);
+
+$bgColor-1: rgb(233, 93, 83);
+$bgColor-2: rgb(212, 224, 255);
+$bgColor-2: rgba(255, 255, 102, 0.2);
+$bgColor-3: rgb(5, 84, 255);
+
+$heightFooter: 470px;
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    path {
+        fill: url(#MyGradient);
+    }
+}

@@ -1,0 +1,30 @@
+.footer-background {
+    .footer-wave,
+    .footer-wave-mobile {
+        position: absolute;
+        width: 100%;
+        background-color: $bgColor-2;
+        color: $bgColor-3;
+    }
+
+    .footer-wave {
+        height: $heightFooter;
+        display: block;
+
+        svg {
+            height: $heightFooter;
+        }
+    }
+    .footer-wave-mobile {
+        height: 300px;
+        display: none;
+    }
+    @media screen and (max-width: 400px) {
+        .footer-wave {
+            display: none;
+        }
+        .footer-wave-mobile {
+            display: block;
+        }
+    }
+}

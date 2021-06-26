@@ -1,0 +1,30 @@
+@import 'background';
+@import 'content';
+
+footer {
+    height: $heightFooter;
+
+    & > div {
+        position: relative;
+    }
+
+    .socials {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        padding-top: 40px;
+
+        i + i {
+            margin-left: 30px;
+        }
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+    }
+    @media screen and (max-width: 750px) {
+        // Placer la lettre en dessous
+    }
+}
