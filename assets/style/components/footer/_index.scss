@@ -14,8 +14,14 @@ footer {
         justify-content: center;
         padding-top: 40px;
 
-        i + i {
-            margin-left: 30px;
+        i {
+            color: $color-1;
+            &:hover {
+                color: #333;
+            }
+            & + i {
+                margin-left: 30px;
+            }
         }
     }
 
@@ -23,8 +29,6 @@ footer {
         display: flex;
         justify-content: center;
         padding-top: 15px;
-    }
-    @media screen and (max-width: 750px) {
-        // Placer la lettre en dessous
+        color: #333;
     }
 }

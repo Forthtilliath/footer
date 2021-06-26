@@ -1,7 +1,6 @@
 @import 'letter';
 
 .footer-content {
-    position: relative;
     display: flex;
     justify-content: space-evenly;
     align-content: center;
@@ -61,5 +60,15 @@
         background-color: $color-3;
         clip-path: polygon(20% 0%, 100% 0%, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
         border-radius: 5%;
+    }
+
+    @media screen and (max-width: 750px) {
+        .footer-content {
+            flex-wrap: wrap;
+
+            .letter-image {
+                order: 2;
+            }
+        }
     }
 }
