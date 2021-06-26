@@ -1,0 +1,15 @@
+{
+    "name": "footer",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch ./assets/style/main.scss:./assets/style/style.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "sass": "^1.35.1"
+    }
+}
