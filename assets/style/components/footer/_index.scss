@@ -9,15 +9,16 @@ footer {
     }
 
     .socials {
-        display: flex;
-        align-content: center;
-        justify-content: center;
+        @include flex-center;
         padding-top: 40px;
 
         i {
             color: $color-1;
+            transition: 0.4s ease;
+
             &:hover {
-                color: #333;
+                color: $color-6;
+                transition: 0.4s ease;
             }
             & + i {
                 margin-left: 30px;
@@ -26,10 +27,9 @@ footer {
     }
 
     .copyright {
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         padding-top: 15px;
-        color: #333;
+        color: $color-6;
     }
 }
 

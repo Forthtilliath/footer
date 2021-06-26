@@ -11,13 +11,18 @@ $color-2: rgb(225, 83, 73);
 $color-3: rgb(233, 95, 85);
 $color-4: rgb(203, 90, 94);
 
-$bgColor-1: rgb(233, 93, 83);
-$bgColor-2: rgb(212, 224, 255);
-$bgColor-2: rgba(255, 255, 102, 0.2);
-$bgColor-3: rgb(5, 84, 255);
+$color-5: hsla(60, 100%, 70%, 0.2);
+$color-6: #333333;
+$color-7: #ffff52;
 
 $heightFooter: 470px;
 $heightFooterMobile: 670px;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 body {
     min-height: 100vh;
@@ -25,12 +30,6 @@ body {
     flex-direction: column;
 
     path {
-        fill: url(#MyGradient);
-    }
-
-    @media screen and (max-width: 750px) {
-        path {
-            fill: url(#MyGradient2);
-        }
+        fill: url(#svg-gradient);
     }
 }

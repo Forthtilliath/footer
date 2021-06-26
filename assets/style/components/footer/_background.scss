@@ -3,21 +3,20 @@
     .footer-wave-mobile {
         position: absolute;
         width: 100%;
-        background-color: $bgColor-2;
-        color: $bgColor-3;
+        background-color: $color-5;
     }
 
     .footer-wave {
-        height: $heightFooter;
         display: block;
+        height: $heightFooter;
 
         svg {
             height: $heightFooter;
         }
     }
     .footer-wave-mobile {
-        height: $heightFooterMobile;
         display: none;
+        height: $heightFooterMobile;
 
         svg {
             height: $heightFooterMobile;

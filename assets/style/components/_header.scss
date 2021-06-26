@@ -1,8 +1,7 @@
 header {
-    background-color: $bgColor-1;
+    @include flex-center;
+    background-color: $color-3;
+    color: $color-6;
     height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-bottom: 3px solid $color-1;
 }

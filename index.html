@@ -13,53 +13,45 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <header><h1>HEADER</h1></header>
+        <svg height="0">
+            <defs>
+                <lineargradient id="svg-gradient">
+                    <stop offset="5%" stop-color="#F60" />
+                    <stop offset="95%" stop-color="#FF6" />
+                </lineargradient>
+            </defs>
+
+            <symbol id="footer-wave" viewBox="0 0 1080 400" preserveAspectRatio="none">
+                <path
+                    d="M1080 400H0V58.0882C0 58.0882 143.571 100 198.214 94.8529C252.857 89.7059 337.5 29.4118 422.143 22.0588C506.786 14.7059 628.929 49.2647 742.5 62.5C856.071 75.7353 1080 0 1080 0V400Z"
+                />
+            </symbol>
+            <symbol id="footer-wave-mobile" viewBox="0 0 600 300" preserveAspectRatio="none">
+                <path
+                    d="M600 300H0V11.2446C0 11.2446 72.8499 29.874 103.207 25.5271C133.564 21.1803 196.125 8.09004 243.149 1.88024C290.173 -4.32955 358.479 5.90419 421.574 17.0818C484.67 28.2594 600 1.88024 600 1.88024V300Z"
+                />
+            </symbol>
+        </svg>
+
+        <header>
+            <h1>HEADER</h1>
+        </header>
+
         <div class="container">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam labore nemo nulla rerum cumque possimus
             aperiam obcaecati maxime iusto nisi expedita ducimus beatae natus adipisci repudiandae autem amet quidem
             eius similique esse, facere modi dicta tempora neque. Doloremque et praesentium, tempora, quaerat quisquam
             voluptates pariatur saepe aperiam provident cum recusandae.
         </div>
+
         <footer>
             <div class="footer-background">
-                <div class="footer-wave">
-                    <svg
-                        width="100%"
-                        viewBox="0 0 1080 400"
-                        preserveAspectRatio="none"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <defs>
-                            <lineargradient id="MyGradient">
-                                <stop offset="5%" stop-color="#F60" />
-                                <stop offset="95%" stop-color="#FF6" />
-                            </lineargradient>
-                        </defs>
-                        <path
-                            d="M1080 400H0V58.0882C0 58.0882 143.571 100 198.214 94.8529C252.857 89.7059 337.5 29.4118 422.143 22.0588C506.786 14.7059 628.929 49.2647 742.5 62.5C856.071 75.7353 1080 0 1080 0V400Z"
-                        />
-                    </svg>
-                </div>
-                <div class="footer-wave-mobile">
-                    <svg
-                        width="100%"
-                        viewBox="0 0 600 300"
-                        preserveAspectRatio="none"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <defs>
-                            <lineargradient id="MyGradient2">
-                                <stop offset="5%" stop-color="#F60" />
-                                <stop offset="95%" stop-color="#FF6" />
-                            </lineargradient>
-                        </defs>
-                        <path
-                            d="M600 300H0V11.2446C0 11.2446 72.8499 29.874 103.207 25.5271C133.564 21.1803 196.125 8.09004 243.149 1.88024C290.173 -4.32955 358.479 5.90419 421.574 17.0818C484.67 28.2594 600 1.88024 600 1.88024V300Z"
-                        />
-                    </svg>
-                </div>
+                <svg width="100%" class="footer-wave">
+                    <use xlink:href="#footer-wave" />
+                </svg>
+                <svg width="100%" class="footer-wave-mobile">
+                    <use xlink:href="#footer-wave-mobile" />
+                </svg>
             </div>
             <div class="footer-content">
                 <div class="footer-left" data-aos="fade-right" data-aos-duration="1000">
