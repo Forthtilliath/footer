@@ -17,6 +17,7 @@ $bgColor-2: rgba(255, 255, 102, 0.2);
 $bgColor-3: rgb(5, 84, 255);
 
 $heightFooter: 470px;
+$heightFooterMobile: 670px;
 
 body {
     min-height: 100vh;
@@ -25,5 +26,11 @@ body {
 
     path {
         fill: url(#MyGradient);
+    }
+
+    @media screen and (max-width: 750px) {
+        path {
+            fill: url(#MyGradient2);
+        }
     }
 }

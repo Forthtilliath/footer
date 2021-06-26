@@ -14,6 +14,11 @@ body {
 body path {
   fill: url(#MyGradient);
 }
+@media screen and (max-width: 750px) {
+  body path {
+    fill: url(#MyGradient2);
+  }
+}
 
 header {
   background-color: #e95d53;
@@ -45,19 +50,17 @@ header {
   height: 470px;
 }
 .footer-background .footer-wave-mobile {
-  height: 300px;
+  height: 670px;
   display: none;
 }
-@media screen and (max-width: 400px) {
-  .footer-background .footer-wave {
-    display: none;
-  }
-  .footer-background .footer-wave-mobile {
-    display: block;
-  }
+.footer-background .footer-wave-mobile svg {
+  height: 670px;
 }
 
 .letter-image {
+  grid-area: letter;
+  justify-self: center;
+  align-self: center;
   width: 200px;
   height: 200px;
   cursor: pointer;
@@ -181,10 +184,11 @@ header {
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "left letter letter right" "left letter letter right";
   margin-top: 140px;
   color: #ffff52;
 }
@@ -229,6 +233,9 @@ header {
   text-decoration: none;
 }
 .footer-content .footer-left {
+  grid-area: left;
+  justify-self: end;
+  align-self: center;
   width: 200px;
   height: auto;
   background-color: #e15349;
@@ -236,21 +243,33 @@ header {
   border-radius: 5%;
 }
 .footer-content .footer-right {
+  grid-area: right;
+  justify-self: start;
+  align-self: center;
   width: 200px;
   height: auto;
   background-color: #e95f55;
   clip-path: polygon(20% 0%, 100% 0%, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
   border-radius: 5%;
 }
+
 @media screen and (max-width: 750px) {
-  .footer-content .footer-content {
-    flex-wrap: wrap;
+  .footer-content {
+    grid-template-areas: "left left right right" "letter letter letter letter";
   }
-  .footer-content .footer-content .letter-image {
-    order: 2;
+
+  .footer-left {
+    justify-self: center !important;
+  }
+
+  .footer-right {
+    justify-self: center !important;
+  }
+
+  .letter-image {
+    justify-self: center !important;
   }
 }
-
 footer {
   height: 470px;
 }
@@ -277,6 +296,18 @@ footer .copyright {
   justify-content: center;
   padding-top: 15px;
   color: #333;
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    height: 670px !important;
+  }
+  footer .footer-background .footer-wave {
+    display: none !important;
+  }
+  footer .footer-background .footer-wave-mobile {
+    display: block !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

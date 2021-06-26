@@ -32,3 +32,18 @@ footer {
         color: #333;
     }
 }
+
+@media screen and (max-width: 750px) {
+    footer {
+        height: $heightFooterMobile !important;
+
+        .footer-background {
+            .footer-wave {
+                display: none !important;
+            }
+            .footer-wave-mobile {
+                display: block !important;
+            }
+        }
+    }
+}

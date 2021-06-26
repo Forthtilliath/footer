@@ -1,10 +1,13 @@
 @import 'letter';
 
 .footer-content {
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        'left letter letter right'
+        'left letter letter right';
     margin-top: 140px;
     color: #ffff52;
 
@@ -48,6 +51,9 @@
         }
     }
     .footer-left {
+        grid-area: left;
+        justify-self: end;
+        align-self: center;
         width: 200px;
         height: auto;
         background-color: $color-2;
@@ -55,20 +61,30 @@
         border-radius: 5%;
     }
     .footer-right {
+        grid-area: right;
+        justify-self: start;
+        align-self: center;
         width: 200px;
         height: auto;
         background-color: $color-3;
         clip-path: polygon(20% 0%, 100% 0%, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
         border-radius: 5%;
     }
+}
 
-    @media screen and (max-width: 750px) {
-        .footer-content {
-            flex-wrap: wrap;
-
-            .letter-image {
-                order: 2;
-            }
-        }
+@media screen and (max-width: 750px) {
+    .footer-content {
+        grid-template-areas:
+            'left left right right'
+            'letter letter letter letter';
+    }
+    .footer-left {
+        justify-self: center !important;
+    }
+    .footer-right {
+        justify-self: center !important;
+    }
+    .letter-image {
+        justify-self: center !important;
     }
 }

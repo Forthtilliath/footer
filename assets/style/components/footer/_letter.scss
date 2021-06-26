@@ -1,4 +1,7 @@
 .letter-image {
+    grid-area: letter;
+    justify-self: center;
+    align-self: center;
     width: 200px;
     height: 200px;
     cursor: pointer;

@@ -16,15 +16,11 @@
         }
     }
     .footer-wave-mobile {
-        height: 300px;
+        height: $heightFooterMobile;
         display: none;
-    }
-    @media screen and (max-width: 400px) {
-        .footer-wave {
-            display: none;
-        }
-        .footer-wave-mobile {
-            display: block;
+
+        svg {
+            height: $heightFooterMobile;
         }
     }
 }
