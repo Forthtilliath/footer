@@ -29,9 +29,11 @@
 
             li {
                 .icon-f1 {
-                    color: $color-7;
-                    background: url(https://raw.githubusercontent.com/Forthtilliath/footer/main/assets/svg/formule1.svg) no-repeat center;
+                    // background: url(https://raw.githubusercontent.com/Forthtilliath/footer/main/assets/svg/formule1.svg) no-repeat center;
                     // background: url(../svg/formule1.svg) no-repeat center;
+                    @include formuleOne($color-formuleOne-li);
+                    background-repeat: no-repeat;
+                    background-position: center;
                     height: 14px;
                     width: 28px;
                     transform: translate(-50px, 2px);
